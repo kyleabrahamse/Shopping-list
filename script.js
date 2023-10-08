@@ -621,7 +621,7 @@ function getRandomRecipes(numRecipes) {
 }
 
 function generateShoppingListAndDisplayRecipes() {
-  const numRecipesToSelect = 7; // Number of recipes to select
+  const numRecipesToSelect = 6; // Number of recipes to select
   const selectedRecipes = getRandomRecipes(numRecipesToSelect);
 
   // Define the days of the week

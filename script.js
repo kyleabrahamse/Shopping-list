@@ -620,8 +620,13 @@ function getRandomRecipes(numRecipes) {
   return shuffledRecipes.slice(0, numRecipes);
 }
 
+// Number of recipes wanted for the week
+//
+//
+//
+
 function generateShoppingListAndDisplayRecipes() {
-  const numRecipesToSelect = 6; // Number of recipes to select
+  const numRecipesToSelect = document.querySelector(".num-input").value; // Number of recipes to select
   const selectedRecipes = getRandomRecipes(numRecipesToSelect);
 
   // Define the days of the week
@@ -721,3 +726,10 @@ function displayShoppingList(shoppingList) {
   });
   shoppingListContainer.appendChild(ulShoppingList);
 }
+
+const numInput = document.querySelector(".num-input");
+numInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    generateShoppingListAndDisplayRecipes();
+  }
+});
